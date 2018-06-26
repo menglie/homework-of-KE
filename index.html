@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			.wraper,body{
+				padding: 10px;
+				height: 100%;
+			}
+			*{
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			.wrap{
+				width: 1100px;
+				margin: 0 auto;
+			}
+			.name{
+				font-size: 28px;
+			}
+			/*清除浮动*/
+			.clear{
+				overflow: hidden;
+			}
+			/*左浮动*/
+			.left{
+				float: left;
+			}
+			#form{
+				height: 48px;
+				width: 420px;
+				/*position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;*/
+				margin: 0 auto;
+				margin-top: 15%;
+				
+			}
+			/*块元素  定义高度*/
+			#form input{
+				font-size: 16px;
+				display: block;
+				height: 48px;
+			}
+			/*查询按钮*/
+			#form input.search{
+				width: 60px;
+				cursor: pointer;
+			}
+			/*搜索框*/
+			#form input.inWrite{
+				width: 250px;
+				padding-left: 5px;
+			}
+			/*下拉菜单*/
+			#form select{
+				font-size: 16px;
+				padding: 0 2px;
+				width: auto;
+				height: 48px;
+			}
+			#form select option{
+				overflow: hidden;
+				width: 82px;
+				height: 48px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wraper">
+			<p class="name">出版物查询系统</p>
+			<form id="form" action="http://localhost:12345/query" method="post" class="clear wrap">
+				<select name="itemtype" class="left chose">
+					<option value="图书" id="1">图书</option>
+					<option value="电影" id="2">电影</option>
+					<option value="游戏" id="3">游戏</option>
+				</select>
+				<input class="left inWrite" type="search" name="itemname" id="4" placeholder="请输入搜索内容" />
+				<input class="left search" type="submit" value="查询" id="5"/>
+			</form>
+			<p style="position: absolute;bottom: 20px;width: 98%;"><span style="display: block; text-align: center;color: #666;">版权所有，盗版也没事</span></p>
+		</div>
+		
+	</body>
+</html>
